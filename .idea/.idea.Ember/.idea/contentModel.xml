@@ -21,6 +21,7 @@
         <e p="Camera.cs" t="Include" />
         <e p="Device.cs" t="Include" />
         <e p="Ember.csproj" t="IncludeRecursive" />
+        <e p="Face.cs" t="Include" />
         <e p="MainPage.xaml" t="Include" />
         <e p="MainPage.xaml.cs" t="Include" />
         <e p="Mesh.cs" t="Include" />

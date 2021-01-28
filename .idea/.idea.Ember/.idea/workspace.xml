@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ember/Face.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Ember.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Ember.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
       <option value="$PROJECT_DIR$/Ember/MainPage.xaml" />
       <option value="$PROJECT_DIR$/Ember/.gitignore" />
       <option value="$PROJECT_DIR$/Ember/Device.cs" />
+      <option value="$PROJECT_DIR$/Ember/Face.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1neHE2XmHp0bbeezy9DxYZ8uDE2" />
@@ -76,7 +78,7 @@
       <workItem from="1611743695762" duration="2060000" />
       <workItem from="1611818415757" duration="10125000" />
       <workItem from="1611830997662" duration="815000" />
-      <workItem from="1611839519939" duration="7540000" />
+      <workItem from="1611839519939" duration="7923000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -127,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611846850613</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="✨ Draw line between two points">
+      <created>1611863141438</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611863141438</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +163,7 @@
     <MESSAGE value=" Ignore bin and obj folders" />
     <MESSAGE value=" added gitignore" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="✨ Draw line between two points" />
+    <option name="LAST_COMMIT_MESSAGE" value="✨ Draw line between two points" />
   </component>
 </project>
