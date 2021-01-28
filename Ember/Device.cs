@@ -81,11 +81,29 @@ namespace Ember
             }
         }
 
+        public void DrawLine(Vector2 point0, Vector2 point1)
+        {
+            var dist = (point1 - point0).Length();
+
+            // If the distance between the 2 points is less than 2 pixels
+            // We're exiting
+            if (dist < 2)
+                return;
+
+            // Find the middle point between first & second point
+            Vector2 middlePoint = point0 + (point1 - point0)/2;
+            // We draw this point on screen
+            DrawPoint(middlePoint);
+            // Recursive algorithm launched between first & middle point
+            // and between middle & second point
+            DrawLine(point0, middlePoint);
+            DrawLine(middlePoint, point1);
+        }
+
         // The main method of the engine that re-compute each vertex projection
         // during each frame
         public void Render(Camera camera, params Mesh[] meshes)
         {
-            // To understand this part, please read the prerequisites resources
             var viewMatrix = Matrix.LookAtLH(camera.Position, camera.Target, Vector3.UnitY);
             var projectionMatrix = Matrix.PerspectiveFovRH(0.78f, 
                                                            (float)bmp.PixelWidth / bmp.PixelHeight, 
@@ -99,12 +117,19 @@ namespace Ember
 
                 var transformMatrix = worldMatrix * viewMatrix * projectionMatrix;
 
-                foreach (var vertex in mesh.Vertices)
+                // foreach (var vertex in mesh.Vertices)
+                // {
+                //     // First, we project the 3D coordinates into the 2D space
+                //     var point = Project(vertex, transformMatrix);
+                //     // Then we can draw on screen
+                //     DrawPoint(point);
+                // }
+                
+                for (var i = 0; i < mesh.Vertices.Length - 1; i++)
                 {
-                    // First, we project the 3D coordinates into the 2D space
-                    var point = Project(vertex, transformMatrix);
-                    // Then we can draw on screen
-                    DrawPoint(point);
+                    var point0 = Project(mesh.Vertices[i], transformMatrix);
+                    var point1 = Project(mesh.Vertices[i + 1], transformMatrix);
+                    DrawLine(point0, point1);
                 }
             }
         }
