@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Ember/monkey.babylon" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Ember.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Ember.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ember/Mesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Mesh.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +27,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Ember/obj/x64/Debug/.NETCore,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/billy/OneDrive/Documents/GitHub/MystNet/Ember/Ember/Device.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ember/MainPage.xaml.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -35,8 +37,8 @@
       <option value="$PROJECT_DIR$/Ember/.gitignore" />
       <option value="$PROJECT_DIR$/Ember/Face.cs" />
       <option value="$PROJECT_DIR$/Ember/Mesh.cs" />
-      <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
       <option value="$PROJECT_DIR$/Ember/Device.cs" />
+      <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1neHE2XmHp0bbeezy9DxYZ8uDE2" />
@@ -82,7 +84,7 @@
       <workItem from="1611830997662" duration="815000" />
       <workItem from="1611839519939" duration="8014000" />
       <workItem from="1611891022126" duration="2880000" />
-      <workItem from="1611900323418" duration="6359000" />
+      <workItem from="1611900323418" duration="9494000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -154,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611891383724</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="✨ render lines">
+      <created>1611909043974</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611909043974</updated>
+    </task>
+    <task id="LOCAL-00012" summary="✨ enhance drawing lines">
+      <created>1611909071355</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611909071355</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +200,8 @@
     <MESSAGE value="✨ Draw line between two points" />
     <MESSAGE value="✨ New Face object to display faces with triangles" />
     <MESSAGE value="update workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml" />
+    <MESSAGE value="✨ render lines" />
+    <MESSAGE value="✨ enhance drawing lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="✨ enhance drawing lines" />
   </component>
 </project>

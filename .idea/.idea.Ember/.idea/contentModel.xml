@@ -24,6 +24,7 @@
         <e p="MainPage.xaml" t="Include" />
         <e p="MainPage.xaml.cs" t="Include" />
         <e p="Mesh.cs" t="Include" />
+        <e p="monkey.babylon" t="Include" />
         <e p="obj" t="Include">
           <e p="x64" t="Include">
             <e p="Debug" t="Include">
