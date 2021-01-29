@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.UI.Xaml.Media.Imaging;
 using SharpDX;
 
@@ -100,6 +101,34 @@ namespace Ember
             DrawLine(middlePoint, point1);
         }
 
+        public void DrawBLine(Vector2 point0, Vector2 point1)
+        {
+            var x0 = (int)point0.X;
+            var y0 = (int)point0.Y;
+            var x1 = (int)point1.X;
+            var y1 = (int)point1.Y;
+            
+            var dx = Math.Abs(x1 - x0);
+            var dy = Math.Abs(y1 - y0);
+            var sx = (x0 < x1) ? 1 : -1;
+            var sy = (y0 < y1) ? 1 : -1;
+            var err = dx - dy;
+
+            while (true) {
+                DrawPoint(new Vector2(x0, y0));
+
+                if ((x0 == x1) && (y0 == y1))
+                    break;
+                var e2 = 2 * err;
+                if (e2 > -dy) { err -= dy;
+                    x0 += sx;
+                }
+                if (e2 < dx) { err += dx;
+                    y0 += sy;
+                }
+            }
+        }
+
         // The main method of the engine that re-compute each vertex projection
         // during each frame
         public void Render(Camera camera, params Mesh[] meshes)
@@ -109,7 +138,7 @@ namespace Ember
                                                            (float)bmp.PixelWidth / bmp.PixelHeight, 
                                                            0.01f, 1.0f);
 
-            foreach (Mesh mesh in meshes) 
+            foreach (var mesh in meshes) 
             {
                 // Beware to apply rotation before translation 
                 var worldMatrix = Matrix.RotationYawPitchRoll(mesh.Rotation.Y, mesh.Rotation.X, mesh.Rotation.Z) * 
@@ -125,11 +154,26 @@ namespace Ember
                 //     DrawPoint(point);
                 // }
                 
-                for (var i = 0; i < mesh.Vertices.Length - 1; i++)
+                // for (var i = 0; i < mesh.Vertices.Length - 1; i++)
+                // {
+                //     var point0 = Project(mesh.Vertices[i], transformMatrix);
+                //     var point1 = Project(mesh.Vertices[i + 1], transformMatrix);
+                //     DrawLine(point0, point1);
+                // }
+
+                foreach (var face in mesh.Faces)
                 {
-                    var point0 = Project(mesh.Vertices[i], transformMatrix);
-                    var point1 = Project(mesh.Vertices[i + 1], transformMatrix);
-                    DrawLine(point0, point1);
+                    var vertexA = mesh.Vertices[face.A];
+                    var vertexB = mesh.Vertices[face.B];
+                    var vertexC = mesh.Vertices[face.C];
+
+                    var pixelA = Project(vertexA, transformMatrix);
+                    var pixelB = Project(vertexB, transformMatrix);
+                    var pixelC = Project(vertexC, transformMatrix);
+
+                    DrawBLine(pixelA, pixelB);
+                    DrawBLine(pixelB, pixelC);
+                    DrawBLine(pixelC, pixelA);
                 }
             }
         }
