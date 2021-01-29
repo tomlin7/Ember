@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Mesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Mesh.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,16 +26,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Ember/obj/x64/Debug/.NETCore,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ember/MainPage.xaml.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Ember/Camera.cs" />
-      <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
-      <option value="$PROJECT_DIR$/Ember/Mesh.cs" />
       <option value="$PROJECT_DIR$/Ember/MainPage.xaml" />
       <option value="$PROJECT_DIR$/Ember/.gitignore" />
-      <option value="$PROJECT_DIR$/Ember/Device.cs" />
       <option value="$PROJECT_DIR$/Ember/Face.cs" />
+      <option value="$PROJECT_DIR$/Ember/Mesh.cs" />
+      <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
+      <option value="$PROJECT_DIR$/Ember/Device.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1neHE2XmHp0bbeezy9DxYZ8uDE2" />
@@ -51,7 +56,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -76,7 +81,8 @@
       <workItem from="1611818415757" duration="10125000" />
       <workItem from="1611830997662" duration="815000" />
       <workItem from="1611839519939" duration="8014000" />
-      <workItem from="1611891022126" duration="284000" />
+      <workItem from="1611891022126" duration="2880000" />
+      <workItem from="1611900323418" duration="6359000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -141,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611863342704</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update workspace.xml">
+      <created>1611891383724</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611891383724</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +183,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="✨ Draw line between two points" />
     <MESSAGE value="✨ New Face object to display faces with triangles" />
-    <option name="LAST_COMMIT_MESSAGE" value="✨ New Face object to display faces with triangles" />
+    <MESSAGE value="update workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update workspace.xml" />
   </component>
 </project>
