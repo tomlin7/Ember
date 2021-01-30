@@ -17,6 +17,7 @@
           <e p="StoreLogo.png" t="Include" />
           <e p="Wide310x150Logo.scale-200.png" t="Include" />
         </e>
+        <e p="bin" t="ExcludeRecursive" />
         <e p="Camera.cs" t="Include" />
         <e p="Device.cs" t="Include" />
         <e p="Ember.csproj" t="IncludeRecursive" />
@@ -25,7 +26,7 @@
         <e p="MainPage.xaml.cs" t="Include" />
         <e p="Mesh.cs" t="Include" />
         <e p="monkey.babylon" t="Include" />
-        <e p="obj" t="Include">
+        <e p="obj" t="ExcludeRecursive">
           <e p="x64" t="Include">
             <e p="Debug" t="Include">
               <e p="App.g.cs" t="Include" />
