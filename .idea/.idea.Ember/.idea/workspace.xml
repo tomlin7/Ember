@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
     </list>
@@ -86,7 +85,7 @@
       <workItem from="1611941926085" duration="1620000" />
       <workItem from="1611976259276" duration="1136000" />
       <workItem from="1611980506688" duration="2092000" />
-      <workItem from="1611994752540" duration="7169000" />
+      <workItem from="1611994752540" duration="7447000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -179,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611916524305</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fill Triangles">
+      <created>1612020875878</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612020875878</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +218,7 @@
     <MESSAGE value="✨ render lines" />
     <MESSAGE value="✨ enhance drawing lines" />
     <MESSAGE value="✨ Load models from external babylon files" />
-    <option name="LAST_COMMIT_MESSAGE" value="✨ Load models from external babylon files" />
+    <MESSAGE value="Fill Triangles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fill Triangles" />
   </component>
 </project>

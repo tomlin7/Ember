@@ -29,6 +29,7 @@ namespace Ember
 
         // This method is called to clear the back buffer with a specific color
         public void Clear(byte r, byte g, byte b, byte a) {
+            // Clearing Back Buffer
             for (var index = 0; index < backBuffer.Length; index += 4)
             {
                 // BGRA is used by Windows instead by RGBA in HTML5
@@ -36,6 +37,12 @@ namespace Ember
                 backBuffer[index + 1] = g;
                 backBuffer[index + 2] = r;
                 backBuffer[index + 3] = a;
+            }
+
+            // Clearing Depth Buffer
+            for (var index = 0; index < depthBuffer.Length; index++)
+            {
+                depthBuffer[index] = float.MaxValue;
             }
         }
 
@@ -53,17 +60,25 @@ namespace Ember
         }
 
         // Called to put a pixel on screen at a specific X,Y coordinates
-        public void PutPixel(int x, int y, Color4 color)
+        public void PutPixel(int x, int y, float z, Color4 color)
         {
             // As we have a 1-D Array for our back buffer
             // we need to know the equivalent cell in 1-D based
             // on the 2D coordinates on screen
-            var index = (x + y * bmp.PixelWidth) * 4;
+            var index = (x + y * renderWidth);
+            var index4 = index * 4;
 
-            backBuffer[index] = (byte)(color.Blue * 255);
-            backBuffer[index + 1] = (byte)(color.Green * 255);
-            backBuffer[index + 2] = (byte)(color.Red * 255);
-            backBuffer[index + 3] = (byte)(color.Alpha * 255);
+            if (depthBuffer[index] < z)
+            {
+                return; // Discard
+            }
+
+            depthBuffer[index] = z;
+
+            backBuffer[index4] = (byte)(color.Blue * 255);
+            backBuffer[index4 + 1] = (byte)(color.Green * 255);
+            backBuffer[index4 + 2] = (byte)(color.Red * 255);
+            backBuffer[index4 + 3] = (byte)(color.Alpha * 255);
         }
 
         // Project takes some 3D coordinates and transform them
@@ -81,13 +96,13 @@ namespace Ember
         }
 
         // DrawPoint calls PutPixel but does the clipping operation before
-        public void DrawPoint(Vector2 point, Color4 color)
+        public void DrawPoint(Vector3 point, Color4 color)
         {
             // Clipping what's visible on screen
             if (point.X >= 0 && point.Y >= 0 && point.X < bmp.PixelWidth && point.Y < bmp.PixelHeight)
             {
                 // Drawing a point
-                PutPixel((int)point.X, (int)point.Y, color);
+                PutPixel((int)point.X, (int)point.Y, point.Z ,color);
             }
         }
 
@@ -148,14 +163,21 @@ namespace Ember
             // if pa.Y == pb.Y or pc.Y == pd.Y, gradient is forced to 1
             var gradient1 = pa.Y != pb.Y ? (y - pa.Y) / (pb.Y - pa.Y) : 1;
             var gradient2 = pc.Y != pd.Y ? (y - pc.Y) / (pd.Y - pc.Y) : 1;
-            
+
             int sx = (int)Interpolate(pa.X, pb.X, gradient1);
             int ex = (int)Interpolate(pc.X, pd.X, gradient2);
+
+            // starting Z & ending Z
+            float z1 = Interpolate(pa.Z, pb.Z, gradient1);
+            float z2 = Interpolate(pc.Z, pd.Z, gradient2);
 
             // drawing a line from left (sx) to right (ex) 
             for (var x = sx; x < ex; x++)
             {
-                DrawPoint(new Vector2(x, y), color);
+                float gradient = (x - sx) / (float)(ex - sx);
+
+                var z = Interpolate(z1, z2, gradient);
+                DrawPoint(new Vector3(x, y, z), color);
             }
         }
         
