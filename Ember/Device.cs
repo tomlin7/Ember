@@ -286,6 +286,34 @@ namespace Ember
                 }
             }
             
+            //if (dP1P2 > dP1P3)
+            //{
+            //    Parallel.For((int)p1.Y, (int)p3.Y + 1, y =>
+            //        {
+            //            if (y < p2.Y)
+            //            {
+            //                ProcessScanLine(y, p1, p3, p1, p2, color);
+            //            }
+            //            else
+            //            {
+            //                ProcessScanLine(y, p1, p3, p2, p3, color);
+            //            }
+            //        });
+            //}
+            //else
+            //{
+            //    Parallel.For((int)p1.Y, (int)p3.Y + 1, y =>
+            //        {
+            //            if (y < p2.Y)
+            //            {
+            //                ProcessScanLine(y, p1, p2, p1, p3, color);
+            //            }
+            //            else
+            //            {
+            //                ProcessScanLine(y, p2, p3, p1, p3, color);
+            //            }
+            //        });
+            //}
         }
         
         // The main method of the engine that re-compute each vertex projection
