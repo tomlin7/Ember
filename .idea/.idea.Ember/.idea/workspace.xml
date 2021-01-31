@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,7 @@
       <workItem from="1611976259276" duration="1136000" />
       <workItem from="1611980506688" duration="2092000" />
       <workItem from="1611994752540" duration="13324000" />
-      <workItem from="1612077230335" duration="1808000" />
+      <workItem from="1612077230335" duration="2307000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -207,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612078018412</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Optimizations -parallelization didn't work as expected, rollback">
+      <created>1612079228275</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1612079228275</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +252,7 @@
     <MESSAGE value="Add Depth Buffering" />
     <MESSAGE value="Optimizations" />
     <MESSAGE value="Optimizations -parallelization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimizations -parallelization" />
+    <MESSAGE value="Optimizations -parallelization didn't work as expected, rollback" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimizations -parallelization didn't work as expected, rollback" />
   </component>
 </project>

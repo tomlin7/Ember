@@ -14,6 +14,8 @@ namespace Ember
         private WriteableBitmap bmp;
         private readonly int renderWidth;
         private readonly int renderHeight;
+        
+        private object[] lockBuffer;
 
         public Device(WriteableBitmap bmp)
         {
@@ -25,6 +27,11 @@ namespace Ember
             // on screen (width*height) * 4 (R,G,B & Alpha values). 
             backBuffer = new byte[renderWidth * renderHeight * 4];
             depthBuffer = new float[renderWidth * renderHeight];
+            lockBuffer = new object[renderWidth * renderHeight];
+            for (var i = 0; i < lockBuffer.Length; i++)
+            {
+                lockBuffer[i] = new object();
+            }
         }
 
         // This method is called to clear the back buffer with a specific color
@@ -68,17 +75,21 @@ namespace Ember
             var index = (x + y * renderWidth);
             var index4 = index * 4;
 
-            if (depthBuffer[index] < z)
+            // Protecting our buffer against threads concurrencies
+            lock (lockBuffer[index])
             {
-                return; // Discard
+                if (depthBuffer[index] < z)
+                {
+                    return; // Discard
+                }
+
+                depthBuffer[index] = z;
+
+                backBuffer[index4] = (byte)(color.Blue * 255);
+                backBuffer[index4 + 1] = (byte)(color.Green * 255);
+                backBuffer[index4 + 2] = (byte)(color.Red * 255);
+                backBuffer[index4 + 3] = (byte)(color.Alpha * 255);
             }
-
-            depthBuffer[index] = z;
-
-            backBuffer[index4] = (byte)(color.Blue * 255);
-            backBuffer[index4 + 1] = (byte)(color.Green * 255);
-            backBuffer[index4 + 2] = (byte)(color.Red * 255);
-            backBuffer[index4 + 3] = (byte)(color.Alpha * 255);
         }
 
         // Project takes some 3D coordinates and transform them
