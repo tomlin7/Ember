@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +32,10 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Ember/Camera.cs" />
-      <option value="$PROJECT_DIR$/Ember/MainPage.xaml" />
       <option value="$PROJECT_DIR$/Ember/.gitignore" />
       <option value="$PROJECT_DIR$/Ember/Face.cs" />
       <option value="$PROJECT_DIR$/Ember/Mesh.cs" />
+      <option value="$PROJECT_DIR$/Ember/MainPage.xaml" />
       <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
       <option value="$PROJECT_DIR$/Ember/Device.cs" />
     </changedPaths>
@@ -85,7 +88,8 @@
       <workItem from="1611941926085" duration="1620000" />
       <workItem from="1611976259276" duration="1136000" />
       <workItem from="1611980506688" duration="2092000" />
-      <workItem from="1611994752540" duration="7447000" />
+      <workItem from="1611994752540" duration="13324000" />
+      <workItem from="1612077230335" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -185,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612020875878</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add Depth Buffering">
+      <created>1612021327831</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612021327831</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +230,7 @@
     <MESSAGE value="✨ enhance drawing lines" />
     <MESSAGE value="✨ Load models from external babylon files" />
     <MESSAGE value="Fill Triangles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fill Triangles" />
+    <MESSAGE value="Add Depth Buffering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Depth Buffering" />
   </component>
 </project>

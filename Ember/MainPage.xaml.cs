@@ -85,6 +85,7 @@ namespace Ember
         private Device device;
         Mesh[] meshes;
         Camera mera = new Camera();
+        DateTime previousDate;
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -106,16 +107,22 @@ namespace Ember
         // Rendering loop handler
         void CompositionTarget_Rendering(object sender, object e)
         {
+            // Fps
+            var now = DateTime.Now;
+            var currentFps = 1000.0 / (now - previousDate).TotalMilliseconds;
+            previousDate = now;
+
+            fps.Text = string.Format("{0:0.00} fps", currentFps);
+
+            // Rendering loop
             device.Clear(0, 0, 0, 255);
 
-            foreach (var mesh in meshes) {
-                // rotating slightly the meshes during each frame rendered
-                mesh.Rotation = new Vector3(mesh.Rotation.X + 0.01f, mesh.Rotation.Y + 0.01f, mesh.Rotation.Z);
+            foreach (var mesh in meshes)
+            {
+                mesh.Rotation = new Vector3(mesh.Rotation.X, mesh.Rotation.Y + 0.01f, mesh.Rotation.Z);
+                device.Render(mera, mesh);
             }
 
-            // Doing the various matrix operations
-            device.Render(mera, meshes);
-            // Flushing the back buffer into the front buffer
             device.Present();
         }
 

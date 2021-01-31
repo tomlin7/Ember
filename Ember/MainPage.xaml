@@ -10,5 +10,6 @@
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <Image x:Name="frontBuffer"/>
+        <TextBlock x:Name="fps" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Foreground="White"></TextBlock>
     </Grid>
 </Page>

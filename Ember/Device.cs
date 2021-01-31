@@ -23,8 +23,8 @@ namespace Ember
 
             // the back buffer size is equal to the number of pixels to draw
             // on screen (width*height) * 4 (R,G,B & Alpha values). 
-            backBuffer = new byte[bmp.PixelWidth * bmp.PixelHeight * 4];
-            depthBuffer = new float[bmp.PixelWidth * bmp.PixelHeight];
+            backBuffer = new byte[renderWidth * renderHeight * 4];
+            depthBuffer = new float[renderWidth * renderHeight];
         }
 
         // This method is called to clear the back buffer with a specific color
@@ -90,8 +90,8 @@ namespace Ember
             // The transformed coordinates will be based on coordinate system
             // starting on the center of the screen. But drawing on screen normally starts
             // from top left. We then need to transform them again to have x:0, y:0 on top left.
-            var x = point.X * bmp.PixelWidth + bmp.PixelWidth / 2.0f;
-            var y = -point.Y * bmp.PixelHeight + bmp.PixelHeight / 2.0f;
+            var x = point.X * renderWidth + renderWidth / 2.0f;
+            var y = -point.Y * renderHeight + renderHeight / 2.0f;
             return (new Vector3(x, y, point.Z));
         }
 
@@ -99,7 +99,7 @@ namespace Ember
         public void DrawPoint(Vector3 point, Color4 color)
         {
             // Clipping what's visible on screen
-            if (point.X >= 0 && point.Y >= 0 && point.X < bmp.PixelWidth && point.Y < bmp.PixelHeight)
+            if (point.X >= 0 && point.Y >= 0 && point.X < renderWidth && point.Y < renderHeight)
             {
                 // Drawing a point
                 PutPixel((int)point.X, (int)point.Y, point.Z ,color);
@@ -285,6 +285,7 @@ namespace Ember
                     }
                 }
             }
+            
         }
         
         // The main method of the engine that re-compute each vertex projection
@@ -293,7 +294,7 @@ namespace Ember
         {
             var viewMatrix = Matrix.LookAtLH(camera.Position, camera.Target, Vector3.UnitY);
             var projectionMatrix = Matrix.PerspectiveFovRH(0.78f, 
-                                                           (float)bmp.PixelWidth / bmp.PixelHeight, 
+                                                           (float)renderWidth / renderHeight, 
                                                            0.01f, 1.0f);
 
             foreach (var mesh in meshes) 
