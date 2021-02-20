@@ -103,6 +103,7 @@
         </Compile>
         <Compile Include="Mesh.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="ScanLineData.cs" />
     </ItemGroup>
     <ItemGroup>
         <AppxManifest Include="Package.appxmanifest">

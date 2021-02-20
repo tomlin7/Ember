@@ -1,9 +1,9 @@
 ﻿using SharpDX;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -86,11 +86,12 @@ namespace Ember
         Mesh[] meshes;
         Camera mera = new Camera();
         DateTime previousDate;
+        private Collection<double> lastFPSValues = new Collection<double>();
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             // Choose the back buffer resolution here
-            WriteableBitmap bmp = new WriteableBitmap(640, 480);
+            WriteableBitmap bmp = new WriteableBitmap((int)ActualWidth, (int)ActualHeight);
 
             // Our Image XAML control
             frontBuffer.Source = bmp;
@@ -109,20 +110,40 @@ namespace Ember
         {
             // Fps
             var now = DateTime.Now;
-            var currentFps = 1000.0 / (now - previousDate).TotalMilliseconds;
+            var currentFPS = 1000.0 / (now - previousDate).TotalMilliseconds;
             previousDate = now;
 
-            fps.Text = string.Format("{0:0.00} fps", currentFps);
+            fps.Text = string.Format("instant {0:0.00} fps", currentFPS);
 
-            // Rendering loop
-            device.Clear(0, 0, 0, 255);
-
-            foreach (var mesh in meshes)
+            if (lastFPSValues.Count < 60)
             {
-                mesh.Rotation = new Vector3(mesh.Rotation.X, mesh.Rotation.Y + 0.01f, mesh.Rotation.Z);
-                device.Render(mera, mesh);
+                lastFPSValues.Add(currentFPS);
+            }
+            else
+            {
+                lastFPSValues.RemoveAt(0);
+                lastFPSValues.Add(currentFPS);
+                var totalValues = 0d;
+                for (var i = 0; i < lastFPSValues.Count; i++)
+                {
+                    totalValues += lastFPSValues[i];
+                }
+
+                var averageFPS = totalValues / lastFPSValues.Count;
+                averageFps.Text = string.Format("average {0:0.00} fps", averageFPS);
             }
 
+            device.Clear(0, 0, 0, 255);
+
+            foreach (var mesh in meshes) {
+                // rotating slightly the meshes during each frame rendered
+                //mesh.Rotation = new Vector3(mesh.Rotation.X + 0.01f, mesh.Rotation.Y + 0.01f, mesh.Rotation.Z);
+                mesh.Rotation = new Vector3(mesh.Rotation.X, mesh.Rotation.Y + 0.01f, mesh.Rotation.Z);
+            }
+
+            // Doing the various matrix operations
+            device.Render(mera, meshes);
+            // Flushing the back buffer into the front buffer
             device.Present();
         }
 

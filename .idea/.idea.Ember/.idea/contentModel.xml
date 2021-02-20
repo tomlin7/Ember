@@ -41,6 +41,7 @@
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="Default.rd.xml" t="Include" />
         </e>
+        <e p="ScanLineData.cs" t="Include" />
         <e p="TemporaryKey.pfx" t="Include" />
       </e>
       <e p="Ember.sln" t="IncludeFlat" />
