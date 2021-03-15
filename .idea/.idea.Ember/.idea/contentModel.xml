@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\billy\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\billy\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Ember.-760816512.00" t="ExcludeRecursive" />
-    <e p="C:\Users\billy\OneDrive\Documents\GitHub\MystNet\Ember" t="IncludeFlat">
+    <e p="C:\Users\billy\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Ember.990260577.00" t="ExcludeRecursive" />
+    <e p="C:\Users\billy\RiderProjects\Ember" t="IncludeFlat">
       <e p="Ember" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="App.xaml" t="Include" />
@@ -17,6 +17,7 @@
           <e p="StoreLogo.png" t="Include" />
           <e p="Wide310x150Logo.scale-200.png" t="Include" />
         </e>
+        <e p="bin" t="ExcludeRecursive" />
         <e p="Camera.cs" t="Include" />
         <e p="Device.cs" t="Include" />
         <e p="Ember.csproj" t="IncludeRecursive" />
@@ -25,7 +26,7 @@
         <e p="MainPage.xaml.cs" t="Include" />
         <e p="Mesh.cs" t="Include" />
         <e p="monkey.babylon" t="Include" />
-        <e p="obj" t="Include">
+        <e p="obj" t="ExcludeRecursive">
           <e p="x64" t="Include">
             <e p="Debug" t="Include">
               <e p="App.g.cs" t="Include" />
@@ -42,7 +43,6 @@
           <e p="Default.rd.xml" t="Include" />
         </e>
         <e p="ScanLineData.cs" t="Include" />
-        <e p="TemporaryKey.pfx" t="Include" />
       </e>
       <e p="Ember.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

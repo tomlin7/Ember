@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ember/ScanLineData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ember/Ember.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Ember.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ember/Mesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Mesh.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +23,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Ember/Device.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ember/MainPage.xaml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SoftEngineCSharpPart5GouraudShading/SoftEngine/ScanLineData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SoftEngineCSharpPart5GouraudShading/SoftEngine/Camera.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SoftEngineCSharpPart5GouraudShading/SoftEngine/MainPage.xaml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SoftEngineCSharpPart5GouraudShading/SoftEngine/Device.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SoftEngineCSharpPart5GouraudShading/SoftEngine/App.xaml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SoftEngineCSharpPart5GouraudShading/SoftEngine/Face.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ember/obj/x64/Debug/.NETCore,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/SoftEngineCSharpPart5GouraudShading/SoftEngine/Mesh.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Ember/Device.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -49,6 +37,7 @@
       <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
       <option value="$PROJECT_DIR$/Ember/MainPage.xaml" />
       <option value="$PROJECT_DIR$/Ember/Mesh.cs" />
+      <option value="$PROJECT_DIR$/Ember/Ember.csproj" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1neHE2XmHp0bbeezy9DxYZ8uDE2" />
@@ -68,7 +57,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -103,6 +92,8 @@
       <workItem from="1612077230335" duration="13154000" />
       <workItem from="1612151033319" duration="1358000" />
       <workItem from="1613791405256" duration="2913000" />
+      <workItem from="1615568696200" duration="813000" />
+      <workItem from="1615792108344" duration="626000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -258,6 +249,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value=" Added gitignore" />
     <MESSAGE value=" Initial commit" />
