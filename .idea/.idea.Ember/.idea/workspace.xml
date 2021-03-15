@@ -4,10 +4,22 @@
     <projectFile>Ember/Ember.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="">
+    <list default="true" id="75bdf7aa-9c1f-4a51-a78d-4e185f71d156" name="Default Changelist" comment="Update to new UWP release">
+      <change afterPath="$PROJECT_DIR$/Ember/Material.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ember/Suzanne.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ember/Texture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ember/Vertex.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ember/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Device.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Device.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ember/Ember.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Ember.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Face.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Face.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/MainPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/Mesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/Mesh.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/ScanLineData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/ScanLineData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ember/monkey.babylon" beforeDir="false" afterPath="$PROJECT_DIR$/Ember/monkey.babylon" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +35,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://D:/Users/billy/Downloads/SoftEngineCSharpPart6Sample2/SoftEngine/Device.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Users/billy/Downloads/SoftEngineCSharpPart6Sample2/SoftEngine/MainPage.xaml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Users/billy/Downloads/SoftEngineCSharpPart6Sample2/SoftEngine/App.xaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ember/MainPage.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ember/obj/x64/Debug/.NETCore,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ember/Device.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,13 +46,18 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Ember/Camera.cs" />
       <option value="$PROJECT_DIR$/Ember/.gitignore" />
-      <option value="$PROJECT_DIR$/Ember/Face.cs" />
-      <option value="$PROJECT_DIR$/Ember/ScanLineData.cs" />
-      <option value="$PROJECT_DIR$/Ember/Device.cs" />
-      <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
-      <option value="$PROJECT_DIR$/Ember/MainPage.xaml" />
-      <option value="$PROJECT_DIR$/Ember/Mesh.cs" />
       <option value="$PROJECT_DIR$/Ember/Ember.csproj" />
+      <option value="$PROJECT_DIR$/Ember/Face.cs" />
+      <option value="$PROJECT_DIR$/Ember/Vertex.cs" />
+      <option value="D:/Users/billy/Downloads/SoftEngineCSharpPart6Sample2/SoftEngine/Device.cs" />
+      <option value="$PROJECT_DIR$/Ember/Device.cs" />
+      <option value="$PROJECT_DIR$/Ember/ScanLineData.cs" />
+      <option value="$PROJECT_DIR$/Ember/Mesh.cs" />
+      <option value="$PROJECT_DIR$/Ember/MainPage.xaml" />
+      <option value="$PROJECT_DIR$/Ember/MainPage.xaml.cs" />
+      <option value="$PROJECT_DIR$/Ember/Material.cs" />
+      <option value="$PROJECT_DIR$/Ember/Texture.cs" />
+      <option value="$PROJECT_DIR$/Ember/App.xaml.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1neHE2XmHp0bbeezy9DxYZ8uDE2" />
@@ -93,7 +113,7 @@
       <workItem from="1612151033319" duration="1358000" />
       <workItem from="1613791405256" duration="2913000" />
       <workItem from="1615568696200" duration="813000" />
-      <workItem from="1615792108344" duration="626000" />
+      <workItem from="1615792108344" duration="9727000" />
     </task>
     <task id="LOCAL-00001" summary="🙈 Added gitignore">
       <created>1611843097303</created>
@@ -228,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612079850635</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update to new UWP release">
+      <created>1615793886222</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1615793886222</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +297,7 @@
     <MESSAGE value="Optimizations -parallelization" />
     <MESSAGE value="Optimizations -parallelization didn't work as expected, rollback" />
     <MESSAGE value="Optimizations - protecting with lockBuffer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimizations - protecting with lockBuffer" />
+    <MESSAGE value="Update to new UWP release" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to new UWP release" />
   </component>
 </project>

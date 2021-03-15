@@ -101,9 +101,12 @@
         <Compile Include="MainPage.xaml.cs">
             <DependentUpon>MainPage.xaml</DependentUpon>
         </Compile>
+        <Compile Include="Material.cs" />
         <Compile Include="Mesh.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="ScanLineData.cs" />
+        <Compile Include="Texture.cs" />
+        <Compile Include="Vertex.cs" />
     </ItemGroup>
     <ItemGroup>
         <AppxManifest Include="Package.appxmanifest">
@@ -121,6 +124,7 @@
         <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
         <Content Include="Assets\StoreLogo.png" />
         <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+        <Content Include="Suzanne.jpg" />
     </ItemGroup>
     <ItemGroup>
         <ApplicationDefinition Include="App.xaml">

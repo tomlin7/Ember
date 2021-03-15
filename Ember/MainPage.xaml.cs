@@ -1,16 +1,8 @@
 ﻿using SharpDX;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
@@ -22,7 +14,7 @@ namespace Ember
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MainPage
     {
         // private Device device;
         // Mesh _mesh = new Mesh("Cube", 8, 12);
@@ -82,24 +74,24 @@ namespace Ember
         //     device.Present();
         // }
         
-        private Device device;
-        Mesh[] meshes;
-        Camera mera = new Camera();
-        DateTime previousDate;
-        private Collection<double> lastFPSValues = new Collection<double>();
+        private Device _device;
+        private Mesh[] _meshes;
+        private readonly Camera _mera = new Camera();
+        private DateTime _previousDate;
+        private readonly Collection<double> _lastFpsValues = new Collection<double>();
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             // Choose the back buffer resolution here
-            WriteableBitmap bmp = new WriteableBitmap((int)ActualWidth, (int)ActualHeight);
+            var bmp = new WriteableBitmap((int)ActualWidth, (int)ActualHeight);
 
             // Our Image XAML control
-            frontBuffer.Source = bmp;
+            FrontBuffer.Source = bmp;
             
-            device = new Device(bmp);
-            meshes = await device.LoadJSONFileAsync("monkey.babylon");
-            mera.Position = new Vector3(0, 0, 10.0f);
-            mera.Target = Vector3.Zero;
+            _device = new Device(bmp);
+            _meshes = await Device.LoadJsonFileAsync("monkey.babylon");
+            _mera.Position = new Vector3(0, 0, 10.0f);
+            _mera.Target = Vector3.Zero;
 
             // Registering to the XAML rendering loop
             CompositionTarget.Rendering += CompositionTarget_Rendering;
@@ -110,41 +102,38 @@ namespace Ember
         {
             // Fps
             var now = DateTime.Now;
-            var currentFPS = 1000.0 / (now - previousDate).TotalMilliseconds;
-            previousDate = now;
+            var currentFps = 1000.0 / (now - _previousDate).TotalMilliseconds;
+            _previousDate = now;
 
-            fps.Text = string.Format("instant {0:0.00} fps", currentFPS);
+            Fps.Text = $"instant {currentFps:0.00} fps";
 
-            if (lastFPSValues.Count < 60)
+            if (_lastFpsValues.Count < 60)
             {
-                lastFPSValues.Add(currentFPS);
+                _lastFpsValues.Add(currentFps);
             }
             else
             {
-                lastFPSValues.RemoveAt(0);
-                lastFPSValues.Add(currentFPS);
-                var totalValues = 0d;
-                for (var i = 0; i < lastFPSValues.Count; i++)
-                {
-                    totalValues += lastFPSValues[i];
-                }
+                _lastFpsValues.RemoveAt(0);
+                _lastFpsValues.Add(currentFps);
+                var totalValues = _lastFpsValues.Sum();
 
-                var averageFPS = totalValues / lastFPSValues.Count;
-                averageFps.Text = string.Format("average {0:0.00} fps", averageFPS);
+                var averageFps = totalValues / _lastFpsValues.Count;
+                AverageFps.Text = $"average {averageFps:0.00} fps";
             }
 
-            device.Clear(0, 0, 0, 255);
+            _device.Clear(0, 0, 0, 255);
 
-            foreach (var mesh in meshes) {
+            foreach (var mesh in _meshes) {
                 // rotating slightly the meshes during each frame rendered
                 //mesh.Rotation = new Vector3(mesh.Rotation.X + 0.01f, mesh.Rotation.Y + 0.01f, mesh.Rotation.Z);
                 mesh.Rotation = new Vector3(mesh.Rotation.X, mesh.Rotation.Y + 0.01f, mesh.Rotation.Z);
+                //mesh.Position = new Vector3(0, 0, (float)(5 * Math.Cos(alpha)));
             }
 
             // Doing the various matrix operations
-            device.Render(mera, meshes);
+            _device.Render(_mera, _meshes);
             // Flushing the back buffer into the front buffer
-            device.Present();
+            _device.Present();
         }
 
         public MainPage()

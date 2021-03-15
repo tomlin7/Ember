@@ -1,11 +1,21 @@
 ﻿namespace Ember
 {
-    public class ScanLineData
+    public struct ScanLineData
     {
-        public int currentY;
-        public float ndotla;
-        public float ndotlb;
-        public float ndotlc;
-        public float ndotld;
+        public int CurrentY;
+        public float Ndotla;
+        public float Ndotlb;
+        public float Ndotlc;
+        public float Ndotld;
+
+        public float Ua;
+        public float Ub;
+        public float Uc;
+        public float Ud;
+
+        public float Va;
+        public float Vb;
+        public float Vc;
+        public float Vd;
     }
 }

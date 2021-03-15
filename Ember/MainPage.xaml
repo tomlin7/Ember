@@ -9,8 +9,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Image x:Name="frontBuffer"/>
-        <TextBlock x:Name="fps" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Foreground="White"></TextBlock>
-        <TextBlock x:Name="averageFps" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Foreground="White"></TextBlock>
+        <Image x:Name="FrontBuffer"/>
+        <TextBlock x:Name="Fps" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Foreground="White"></TextBlock>
+        <TextBlock x:Name="AverageFps" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Foreground="White"></TextBlock>
     </Grid>
 </Page>
