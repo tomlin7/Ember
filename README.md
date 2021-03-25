@@ -6,5 +6,3 @@
 <p align="center">
     <a href="https://github.com/YeffyCodeGit/Ember/blob/master/LICENSE.md">License</a> 
 </p>
-
-<h2>More coming soon</h2>
