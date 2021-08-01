@@ -1,8 +1,15 @@
-<h1 align="center">Ember</h1>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/70792552/127762518-57e8faa7-20a7-429d-9403-651c2b8c1076.png">
+  <h1>Ember</h1>
+</div>
 <p align="center">
-  A primarily rendering engine (on development)
+  A primarily rendering engine (undergoing rewrite)
 </p>
 
-<p align="center">
-    <a href="https://github.com/billyeatcookies/Ember/blob/master/LICENSE.md">License</a> 
-</p>
+## License
+This project is available under a [MIT](https://github.com/billyeatcookies/Ember/blob/master/LICENSE.md) license.
+
+## Acknowledgements
+
+Thanks to [RKraft Studios](https://github.com/rushilkoul) for the banner art.
