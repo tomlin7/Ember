@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{72304AC5-8283-4477-B3DF-EAE4484D20C9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmberEngine", "EmberEngine\EmberEngine.vcxproj", "{A9EAACF9-8988-48A1-AA22-04331AD4AABE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmberEngine", "Ember\EmberEngine.vcxproj", "{A9EAACF9-8988-48A1-AA22-04331AD4AABE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

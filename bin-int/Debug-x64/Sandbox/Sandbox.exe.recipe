@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\billy\source\repos\EmberEngine\bin\Debug-x64\EmberEngine\EmberEngine.dll</FullPath>
+      <FullPath>D:\github\EmberEngine\bin\Debug-x64\Ember\Ember.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\billy\source\repos\EmberEngine\bin\Debug-x64\Sandbox\Sandbox.exe</FullPath>
+      <FullPath>D:\github\EmberEngine\bin\Debug-x64\Sandbox\Sandbox.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
