@@ -7,8 +7,8 @@
 </p>
 
 ## License
-This project is available under a [MIT](https://github.com/billyeatcookies/Ember/blob/master/LICENSE.md) license.
+This project is available under [MIT](https://github.com/billyeatcookies/Ember/blob/master/LICENSE.md) license.
 
 ## Acknowledgements
 
-Banner by [RKraft Studios](https://github.com/rushilkoul).
+Banner art by [RKraft Studios](https://github.com/rushilkoul).
