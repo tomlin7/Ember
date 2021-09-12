@@ -1,0 +1,3 @@
+[submodule "Ember/vendor/spdlog"]
+	path = Ember/vendor/spdlog
+	url = https://github.com/billyeatcookies/spdlog.git
