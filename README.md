@@ -1,13 +1,9 @@
 <div align="center">
-  <img src="logo.svg">
+  <img src="logo.svg" width=1000>
+  <a href=".">Docs</a> ◈
+  <a href="./LICENSE.md">License</a> ◈
+  <a href=".">Changelog</a> 
 </div>
 <p align="center">
   A primarily rendering engine (undergoing rewrite)
 </p>
-
-## License
-This project is available under [MIT](https://github.com/billyeatcookies/Ember/blob/master/LICENSE.md) license.
-
-## Acknowledgements
-
-Banner art by [RKraft Studios](https://github.com/rushilkoul).
