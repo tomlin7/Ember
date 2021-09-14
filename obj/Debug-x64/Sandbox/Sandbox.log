@@ -1,8 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(498,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(499,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  SandboxApp.cpp
-D:\github\Ember\Ember\src\Ember\Log.h(17,42): warning C4251: 'Ember::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Ember::Log'
-D:\github\Ember\Ember\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-D:\github\Ember\Ember\src\Ember\Log.h(18,42): warning C4251: 'Ember::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Ember::Log'
-D:\github\Ember\Ember\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-  Sandbox.vcxproj -> D:\github\Ember\bin\Debug-x64\Sandbox\Sandbox.exe

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Ember">
+      <UniqueIdentifier>{900E1D0D-FC22-45BE-C5A4-E81D317841EF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Ember.h" />
+    <ClInclude Include="src\Ember\Application.h">
+      <Filter>Ember</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ember\Core.h">
+      <Filter>Ember</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ember\EntryPoint.h">
+      <Filter>Ember</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ember\Log.h">
+      <Filter>Ember</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Ember\Application.cpp">
+      <Filter>Ember</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ember\Log.cpp">
+      <Filter>Ember</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
