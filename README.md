@@ -1,14 +1,9 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/70792552/127762518-57e8faa7-20a7-429d-9403-651c2b8c1076.png">
-  <h1>Ember</h1>
+  <img src="logo.svg" width=1000>
+  - <a href=".">Docs</a> ◈
+  <a href="./LICENSE.md">License</a> ◈
+  <a href=".">Changelog</a> -
 </div>
 <p align="center">
   A primarily rendering engine (undergoing rewrite)
 </p>
-
-## License
-This project is available under a [MIT](https://github.com/billyeatcookies/Ember/blob/master/LICENSE.md) license.
-
-## Acknowledgements
-
-Banner by [RKraft Studios](https://github.com/rushilkoul).
