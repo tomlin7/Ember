@@ -17,8 +17,18 @@ namespace Ember {
 	void Application::Run() 
 	{
 		WindowResizeEvent e(1200, 720);
-		EM_TRACE(e);
-
+		// tests
+		// true case
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			EM_TRACE(e);
+		}
+		// false case
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			EM_TRACE(e);
+		}
+		
 		while (true);
 	}
 }
