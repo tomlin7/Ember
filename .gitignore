@@ -1,7 +1,7 @@
 # Directories
 .vs/
 bin/
-dist/
+obj/
 
 # Visual Studio files and folder
 .vs/
