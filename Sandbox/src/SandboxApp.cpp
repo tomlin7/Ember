@@ -14,7 +14,7 @@ public:
 	}
 };
 
-Ember::Application* EmberEngine::CreateApplication()
+Ember::Application* Ember::CreateApplication()
 {
 	return new Sandbox();
 }
