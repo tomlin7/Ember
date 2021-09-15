@@ -1,3 +1,6 @@
 [submodule "Ember/vendor/spdlog"]
 	path = Ember/vendor/spdlog
 	url = https://github.com/billyeatcookies/spdlog.git
+[submodule "Ember/vendor/GLFW"]
+	path = Ember/vendor/GLFW
+	url = https://github.com/billyeatcookies/glfw.git
