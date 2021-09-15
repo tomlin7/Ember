@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Core.h"
+#include "Ember/Core.h"
 
 #include <string>
 #include <functional>
