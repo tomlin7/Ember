@@ -1,4 +1,4 @@
 # Directories
 .vs/
 bin/
-bin-int/
+dist/
