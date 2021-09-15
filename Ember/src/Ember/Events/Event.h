@@ -18,7 +18,6 @@ namespace Ember {
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
 		KeyPressed, KeyReleased,
-		MouseButtonPressed, MouseButtonReleased, 
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
 
