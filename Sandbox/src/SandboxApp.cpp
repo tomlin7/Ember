@@ -1,6 +1,6 @@
 #include <Ember.h>
 
-class Sandbox : public EmberEngine::Application 
+class Sandbox : public Ember::Application 
 {
 public:
 	Sandbox()
@@ -14,7 +14,7 @@ public:
 	}
 };
 
-EmberEngine::Application* EmberEngine::CreateApplication()
+Ember::Application* EmberEngine::CreateApplication()
 {
 	return new Sandbox();
 }

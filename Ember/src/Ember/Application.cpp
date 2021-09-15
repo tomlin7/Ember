@@ -1,6 +1,9 @@
 #include "Application.h"
 
-namespace EmberEngine {
+#include "Ember/Events/ApplicationEvent.h"
+#include "Ember/Log.h"
+
+namespace Ember {
 	Application::Application()
 	{
 
@@ -13,6 +16,9 @@ namespace EmberEngine {
 
 	void Application::Run() 
 	{
+		WindowResizeEvent e(1200, 720);
+		EM_TRACE(e);
+
 		while (true);
 	}
 }
