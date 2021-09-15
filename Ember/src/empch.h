@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Ember/Log.h"
+
 #ifdef EM_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
