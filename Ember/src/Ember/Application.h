@@ -2,7 +2,7 @@
 
 #include "Core.h"
 
-namespace EmberEngine {
+namespace Ember {
 	class EMBER_API Application
 	{
 	public:

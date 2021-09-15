@@ -2,7 +2,7 @@
 
 #ifdef EM_PLATFORM_WINDOWS
 
-extern EmberEngine::Application* EmberEngine::CreateApplication();
+extern Ember::Application* Ember::CreateApplication();
 
 int main(int argc, char** argv)
 {
@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	int a = 5;
 	EM_CORE_INFO("Hello! Var={0}", a);
 
-	auto app = EmberEngine::CreateApplication();
+	auto app = Ember::CreateApplication();
 	app->Run();
 	delete app;
 }
