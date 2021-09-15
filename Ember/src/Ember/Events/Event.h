@@ -2,10 +2,6 @@
 
 #include "Ember/Core.h"
 
-#include <string>
-#include <functional>
-
-
 namespace Ember {
 	// Events in Ember are currently blocking, meaning when an event occurs it
 	// immediately gets dispatched and must be dealt with right there an there.

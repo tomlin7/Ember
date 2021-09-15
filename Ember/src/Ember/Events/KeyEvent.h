@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Ember
 {
 	class EMBER_API KeyEvent : public Event

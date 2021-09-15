@@ -1,3 +1,4 @@
+#include "empch.h"
 #include "Application.h"
 
 #include "Ember/Events/ApplicationEvent.h"
