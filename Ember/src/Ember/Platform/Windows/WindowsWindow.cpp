@@ -8,7 +8,11 @@
 namespace Ember {
 	static bool s_GLFWInitialized = false;
 
-
+	static void GLFWErrorCallback(int error, const char* description)
+	{
+		EM_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
+	}
+	
 	Window* Window::Create(const WindowProps& props)
 	{
 		return new WindowsWindow(props);
@@ -37,7 +41,7 @@ namespace Ember {
 			// TODO: glfwTerminate on system.shutdown
 			int success = glfwInit();
 			EM_CORE_ASSERT(success, "Could not initialize GLFW!");
-			
+			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
 
