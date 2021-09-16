@@ -1,7 +1,6 @@
 #include "empch.h"
 #include "Application.h"
 
-#include "Ember/Events/ApplicationEvent.h"
 #include "Ember/Log.h"
 
 #include <GLFW/glfw3.h>
@@ -23,7 +22,10 @@ namespace Ember {
 
 	void Application::OnEvent(Event& e)
 	{
-		EM_CORE_INFO("{0}", e);
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+
+		EM_CORE_TRACE("{0}", e);
 	}
 
 	void Application::Run() 
@@ -34,5 +36,11 @@ namespace Ember {
 			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->OnUpdate();
 		}
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
 	}
 }
