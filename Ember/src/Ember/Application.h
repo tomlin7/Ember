@@ -1,10 +1,8 @@
 #pragma once
 
 #include "Core.h"
-
-#include "Window.h"
 #include "Ember/LayerStack.h"
-#include "Ember/Events/Event.h"
+#include "Events/Event.h"
 #include "Ember/Events/ApplicationEvent.h"
 
 #include "Window.h"
