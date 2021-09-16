@@ -1,8 +1,17 @@
 #include "empch.h"
 #include "WindowsWindow.h"
 
+#include "Ember/Events/ApplicationEvent.h"
+#include "Ember/Events/MouseEvent.h"
+#include "Ember/Events/KeyEvent.h"
+
 namespace Ember {
 	static bool s_GLFWInitialized = false;
+
+	static void GLFWErrorCallback(int error, const char* description)
+	{
+		EM_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
+	}
 
 	Window* Window::Create(const WindowProps& props)
 	{
@@ -32,7 +41,7 @@ namespace Ember {
 			// TODO: glfwTerminate on system.shutdown
 			int success = glfwInit();
 			EM_CORE_ASSERT(success, "Could not initialize GLFW!");
-
+			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
 
@@ -40,6 +49,17 @@ namespace Ember {
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
+
+		// Set GLFW callbacks 
+		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			data.Width = width;
+			data.Height = height;
+
+			WindowResizeEvent event(width, height);
+			data.EventCallback(event);
+		});
 	}
 
 	void WindowsWindow::ShutDown()
