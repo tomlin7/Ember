@@ -64,14 +64,17 @@ project "Ember"
 
 	filter "configurations:Debug"
 		defines "EM_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "EM_RELEASE"
+		buildoptions "/MD"
 		symbols "On"
 	
 	filter "configurations:Dist"
 		defines "EM_DIST"
+		buildoptions "/MD"
 		symbols "On"
 
 project "Sandbox"
@@ -111,12 +114,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "EM_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "EM_RELEASE"
+		buildoptions "/MD"
 		symbols "On"
 	
 	filter "configurations:Dist"
 		defines "EM_DIST"
+		buildoptions "/MD"
 		symbols "On"
