@@ -11,7 +11,7 @@ namespace Ember {
 		virtual ~Layer();
 
 		virtual void OnAttach() {}
-		virtual void OnDetachh() {}
+		virtual void OnDetach() {}
 		virtual void OnUpdate() {}
 		virtual void OnEvent(Event& event) {}
 
