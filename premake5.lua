@@ -10,13 +10,15 @@ workspace "Ember"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
--- Include directories relative to root folder {solution directory}
+-- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Ember/vendor/GLFW/include"
 IncludeDir["Glad"] = "Ember/vendor/Glad/include"
+IncludeDir["ImGui"] = "Ember/vendor/imgui"
 
 include "Ember/vendor/GLFW"
 include "Ember/vendor/Glad"
+include "Ember/vendor/imgui"
 
 project "Ember"
 	location "Ember"
@@ -40,13 +42,15 @@ project "Ember"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
-	links
-	{
+	links 
+	{ 
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -75,12 +79,12 @@ project "Ember"
 	filter "configurations:Release"
 		defines "EM_RELEASE"
 		buildoptions "/MD"
-		symbols "On"
-	
+		optimize "On"
+
 	filter "configurations:Dist"
 		defines "EM_DIST"
 		buildoptions "/MD"
-		symbols "On"
+		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
@@ -125,9 +129,9 @@ project "Sandbox"
 	filter "configurations:Release"
 		defines "EM_RELEASE"
 		buildoptions "/MD"
-		symbols "On"
-	
+		optimize "On"
+
 	filter "configurations:Dist"
 		defines "EM_DIST"
 		buildoptions "/MD"
-		symbols "On"
+		optimize "On"
