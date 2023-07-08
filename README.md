@@ -1,6 +1,6 @@
 <div align="center">
   <img src="logo.svg" width=1000>
-  - <a href=".">Docs</a> ◈
+  - <a href="https://github.com/users/billyeatcookies/projects/4">Docs</a> ◈
   <a href="./LICENSE.md">License</a> ◈
   <a href="./CHANGELOG.md">Changelog</a> -
 </div>
