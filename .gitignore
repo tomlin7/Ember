@@ -14,3 +14,4 @@ obj/
 imgui.ini
 nul
 compile_commands.json
+.claude

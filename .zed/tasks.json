@@ -1,0 +1,20 @@
+[
+  {
+    "label": "Build Debug",
+    "command": "msbuild",
+    "args": ["Ember.sln", "/p:Configuration=Debug"],
+    "tags": ["build"]
+  },
+  {
+    "label": "Run Sandbox",
+    "command": ".\\bin\\Debug-windows-x86_64\\Sandbox\\Sandbox.exe",
+    "args": [],
+    "tags": ["run"]
+  },
+  {
+    "label": "Build & Run",
+    "command": "msbuild",
+    "args": ["Ember.sln", "/p:Configuration=Debug", "&&", ".\\bin\\Debug-windows-x86_64\\Sandbox\\Sandbox.exe"],
+    "tags": ["build-and-run"]
+  }
+]
