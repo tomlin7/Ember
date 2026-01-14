@@ -11,16 +11,19 @@ public:
 
 	void OnUpdate() override
 	{
-		EM_INFO("ExampleLayer::Update");
+		EM_TRACE("ExampleLayer::Update");
+
+		if (Ember::Input::IsKeyPressed(EM_KEY_TAB))
+			EM_INFO("Tab key pressed");
 	}
 
 	void OnEvent(Ember::Event& event) override
 	{
-		EM_TRACE("{0}", event);
+		// EM_TRACE("{0}", event);
 	}
 };
 
-class Sandbox : public Ember::Application 
+class Sandbox : public Ember::Application
 {
 public:
 	Sandbox()

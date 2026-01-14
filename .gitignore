@@ -9,3 +9,8 @@ obj/
 **.vcxproj
 **.vcxproj.filters
 **.vcxproj.user
+
+.cache
+imgui.ini
+nul
+compile_commands.json

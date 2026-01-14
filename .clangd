@@ -1,0 +1,21 @@
+CompileFlags:
+  Add:
+    - -std=c++17
+    - --target=x86_64-pc-windows-msvc
+    - -fms-compatibility
+    - -fms-extensions
+
+    - -DEM_PLATFORM_WINDOWS
+    - -DEM_DEBUG
+    - -DEM_BUILD_DLL
+    - -DGLFW_INCLUDE_NONE
+
+    # === INCLUDE ROOTS (THIS IS THE KEY) ===
+    - -IEmber/src
+    - -IEmber/src/Ember
+
+    # === VENDOR ===
+    - -IEmber/vendor/spdlog/include
+    - -IEmber/vendor/GLFW/include
+    - -IEmber/vendor/Glad/include
+    - -IEmber/vendor/imgui

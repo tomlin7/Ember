@@ -1,3 +1,5 @@
+require "premake/export-compile-commands"
+
 workspace "Ember"
 	architecture "x64"
 	startproject "Sandbox"
