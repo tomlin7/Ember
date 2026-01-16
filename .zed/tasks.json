@@ -3,18 +3,29 @@
     "label": "Build Debug",
     "command": "msbuild",
     "args": ["Ember.sln", "/p:Configuration=Debug"],
-    "tags": ["build"]
+    "tags": ["build"],
   },
   {
     "label": "Run Sandbox",
     "command": ".\\bin\\Debug-windows-x86_64\\Sandbox\\Sandbox.exe",
     "args": [],
-    "tags": ["run"]
+    "tags": ["run"],
   },
   {
     "label": "Build & Run",
     "command": "msbuild",
-    "args": ["Ember.sln", "/p:Configuration=Debug", "&&", ".\\bin\\Debug-windows-x86_64\\Sandbox\\Sandbox.exe"],
-    "tags": ["build-and-run"]
-  }
+    "args": [
+      "Ember.sln",
+      "/p:Configuration=Debug",
+      "&&",
+      ".\\bin\\Debug-windows-x86_64\\Sandbox\\Sandbox.exe",
+    ],
+    "tags": ["build-and-run"],
+  },
+  {
+    "label": "Generate Project Files",
+    "command": "premake5",
+    "args": ["vs2022", "&&", "premake5 export-compile-commands"],
+    "tags": ["generate"],
+  },
 ]

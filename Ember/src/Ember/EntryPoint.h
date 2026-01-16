@@ -2,6 +2,8 @@
 
 #ifdef EM_PLATFORM_WINDOWS
 
+#include <Ember.h>
+
 extern Ember::Application* Ember::CreateApplication();
 
 int main(int argc, char** argv)

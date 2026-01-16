@@ -7,3 +7,6 @@
 [submodule "Ember/vendor/imgui"]
 	path = Ember/vendor/imgui
 	url = https://github.com/billyeatcookies/imgui.git
+[submodule "Ember/vendor/glm"]
+	path = Ember/vendor/glm
+	url = https://github.com/g-truc/glm.git

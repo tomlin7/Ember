@@ -19,3 +19,4 @@ CompileFlags:
     - -IEmber/vendor/GLFW/include
     - -IEmber/vendor/Glad/include
     - -IEmber/vendor/imgui
+    - -IEmber/vendor/glm/glm
