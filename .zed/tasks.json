@@ -28,4 +28,10 @@
     "args": ["vs2022", "&&", "premake5 export-compile-commands"],
     "tags": ["generate"],
   },
+  {
+    "label": "Clean",
+    "command": "msbuild",
+    "args": ["Ember.sln", "/t:Clean"],
+    "tags": ["clean"],
+  },
 ]
