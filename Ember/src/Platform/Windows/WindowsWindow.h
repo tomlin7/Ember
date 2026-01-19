@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Ember/Window.h"
+#include "Ember/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
 
@@ -25,8 +26,9 @@ namespace Ember {
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void ShutDown();
-	private:
+
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
